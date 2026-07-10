@@ -345,11 +345,12 @@
     color: var(--muted);
   }
   .hero h1 .l3 .heart {
-    /* cap-height sized (~0.74em) and optically centered between the two words */
+    /* cap-height sized (~0.74em); no text spaces around it - margins alone control the gap.
+       Right margin is smaller because the parent's 0.34em letter-spacing lands after the box. */
     display: inline-block;
     width: 0.74em;
     height: 0.74em;
-    margin: 0 0.1em;
+    margin: 0 0.6em 0 0.26em;
     vertical-align: -0.03em;
     color: var(--brand-red);
   }
@@ -850,12 +851,11 @@
     <p class="logo-mark__events">· Events ·</p>
   </div>
 
-  <p class="eyebrow">Salon de evenimente · Cluj-Napoca</p>
 
   <h1>
     <span class="l1">Evenimentul Tau</span>
     <span class="l2">La Inaltime,</span>
-    <span class="l3">In Inima <span class="heart" aria-hidden="true"><svg viewBox="0 0 32 29" focusable="false"><path fill="currentColor" d="M23.6 0c-3 0-5.8 1.6-7.6 4.3C14.2 1.6 11.4 0 8.4 0 3.8 0 0 3.7 0 8.3c0 7.3 8 12.8 14.6 18.3l1.4 1.2 1.4-1.2C24 21.1 32 15.6 32 8.3 32 3.7 28.2 0 23.6 0z"/></svg></span> Clujului</span>
+    <span class="l3">In Inima<span class="heart" aria-hidden="true"><svg viewBox="0 0 32 29" focusable="false"><path fill="currentColor" d="M23.6 0c-3 0-5.8 1.6-7.6 4.3C14.2 1.6 11.4 0 8.4 0 3.8 0 0 3.7 0 8.3c0 7.3 8 12.8 14.6 18.3l1.4 1.2 1.4-1.2C24 21.1 32 15.6 32 8.3 32 3.7 28.2 0 23.6 0z"/></svg></span>Clujului</span>
   </h1>
 
   <p class="hero-sub">Un salon cu concept de grădină și o echipă care preia totul,
