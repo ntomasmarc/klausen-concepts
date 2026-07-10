@@ -232,7 +232,8 @@
   .logo-mark__name {
     font-family: var(--font-display);
     font-weight: 700;
-    font-size: clamp(1.5rem, 3.6vw, 2.15rem);
+    /* golden ratio lockup: name = events size x phi^2 (2.618) */
+    font-size: clamp(1.9rem, 4.5vw, 2.75rem);
     letter-spacing: 0.045em;
     line-height: 1;
     color: var(--logo-cream);
@@ -240,7 +241,7 @@
   .logo-mark__events {
     font-family: var(--font-label);
     font-weight: 500;
-    font-size: 0.7rem;
+    font-size: clamp(0.73rem, 1.72vw, 1.05rem);
     letter-spacing: 0.56em;
     text-indent: 0.56em;
     text-transform: uppercase;
@@ -344,11 +345,12 @@
     color: var(--muted);
   }
   .hero h1 .l3 .heart {
+    /* cap-height sized (~0.74em) and optically centered between the two words */
     display: inline-block;
-    width: 0.56em;
-    height: 0.56em;
-    margin-left: 0.4em;
-    vertical-align: -0.04em;
+    width: 0.74em;
+    height: 0.74em;
+    margin: 0 0.1em;
+    vertical-align: -0.03em;
     color: var(--brand-red);
   }
   .hero h1 .l3 .heart svg { display: block; width: 100%; height: 100%; }
