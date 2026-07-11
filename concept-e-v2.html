@@ -727,7 +727,8 @@
     display: block;
     font-family: var(--font-label);
     font-weight: 400;
-    font-size: 0.78rem;
+    /* phi half-step scale: lead 1rem -> support 1.272rem (x sqrt phi 1.272) */
+    font-size: 1rem;
     letter-spacing: 0.22em;
     text-transform: uppercase;
     color: var(--ink);
@@ -736,8 +737,8 @@
   .panel li span {
     display: block;
     font-style: italic;
-    font-size: 1.08rem;
-    line-height: 1.5;
+    font-size: 1.272rem;
+    line-height: 1.618;
     color: var(--muted);
   }
 
@@ -917,15 +918,15 @@
       <ul>
         <li>
           <strong>Salon</strong>
-          <span>cu concept de grădină română</span>
+          <span>concept de grădină, cu elemente din natură, fântână cu apă și plante naturale</span>
         </li>
         <li>
-          <strong>De la 100 la 250 de persoane</strong>
-          <span>Ideal atât pentru evenimente mici, cât și pentru cele ample.</span>
+          <strong>Capacitate</strong>
+          <span>flexibilă, de 100-250 de locuri, cu posibilitate de extindere până la 400</span>
         </li>
         <li>
-          <strong>Extensibil până la 400 de invitați</strong>
-          <span>Configurația modulară permite extinderea capacității.</span>
+          <strong>Spațiu</strong>
+          <span>adaptabil pentru mai multe tipuri de evenimente, cu configurații multiple de aranjare a meselor, pretabil pentru evenimente de zi/noapte</span>
         </li>
       </ul>
     </article>
@@ -935,26 +936,29 @@
       <div class="panel-title"><h3>Gustul</h3></div>
       <ul>
         <li>
-          <strong>Laborator propriu de torturi și prăjituri</strong>
+          <strong>Laborator propriu de torturi & prăjituri</strong>
         </li>
         <li>
-          <strong>Bere proprie artizanală</strong>
+          <strong>Specialități de patiserie & înghețată artizanale</strong>
+        </li>
+        <li>
+          <strong>Bere artizanală marca proprie</strong>
         </li>
       </ul>
     </article>
 
     <article class="panel reveal">
       <span class="bracket" aria-hidden="true"></span>
-      <div class="panel-title"><h3>Spectacol cu Extra Selecții</h3></div>
+      <div class="panel-title"><h3>Extra Selecții Gourmet</h3></div>
       <ul>
         <li>
-          <strong>Candy bar</strong>
+          <strong>Candy-bar</strong>
         </li>
         <li>
-          <strong>Ice cream bar</strong>
+          <strong>Ice-cream bar</strong>
         </li>
         <li>
-          <strong>Fresh fruit bar</strong>
+          <strong>Fresh-fruit bar</strong>
         </li>
       </ul>
     </article>
