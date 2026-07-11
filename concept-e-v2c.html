@@ -672,7 +672,7 @@
   .register-title {
     font-family: var(--font-display);
     font-weight: 600;
-    font-size: clamp(1.35rem, 3.4vw, 1.79rem);
+    font-size: clamp(1.5rem, 3.4vw, 2.058rem);
     letter-spacing: 0.05em;
     text-transform: uppercase;
     line-height: 1.15;
@@ -686,7 +686,7 @@
     display: block;
     font-family: var(--font-label);
     font-weight: 500;
-    font-size: clamp(0.94rem, 1.7vw, 1.1rem);
+    font-size: clamp(1.05rem, 1.7vw, 1.272rem);
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--ink);
@@ -696,10 +696,11 @@
   .item-support {
     display: block;
     font-style: italic;
-    font-size: 0.68rem;
+    /* half phi-step scale: support 1rem -> lead 1.272 (x sqrt phi) -> title 2.058 (x phi) */
+    font-size: 1rem;
     letter-spacing: 0.01em;
     text-transform: none;
-    line-height: 1.65;
+    line-height: 1.618;
     max-width: 46ch;
     color: var(--muted);
   }

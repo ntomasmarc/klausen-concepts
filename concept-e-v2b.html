@@ -647,14 +647,15 @@
   }
 
   /* ----- "Meniu de gala" card: single centered column, phi-derived scale -----
-     phi scale (phi=1.618): support 0.72rem -> lead ~1.165rem -> group-title ~1.885rem
-       -> why-head h2 2.9rem (existing; approximates the next 1.618 step, ~3.05rem)
+     phi scale (phi=1.618, sqrt(phi)=1.272): support 1rem -> lead 1.272rem (x sqrt phi)
+       -> group-title 2.058rem (x phi) -> why-head h2 2.9rem (existing, next step approx)
      spacing scale: 0.5rem -> 0.809rem -> 1.309rem -> 2.118rem -> 3.427rem
      card max-width: 61.8% of the 1180px section container on desktop, clamped for mobile */
   .menu-card {
     --phi: 1.618;
-    --menu-support: 0.72rem;
-    --menu-lead: calc(var(--menu-support) * var(--phi));
+    --phi-half: 1.272; /* sqrt(phi): half-step so support stays readable */
+    --menu-support: 1rem;
+    --menu-lead: calc(var(--menu-support) * var(--phi-half));
     --menu-group-title: calc(var(--menu-lead) * var(--phi));
     --menu-sp-1: 0.5rem;
     --menu-sp-2: calc(var(--menu-sp-1) * var(--phi));

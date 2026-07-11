@@ -647,10 +647,10 @@
   }
 
   /* ---------- Colonnade: golden-ratio type scale + rhythm ----------
-     phi = 1.618. Base unit (support text) = 0.9rem.
-       support      0.9rem                   (phi^0 x 0.9)
-       lead         1.456rem  (0.9 x phi)     (phi^1 x 0.9)
-       group title  2.356rem  (1.456 x phi)   (phi^2 x 0.9)
+     phi = 1.618, sqrt(phi) = 1.272.
+       support      1.145rem  (lead / sqrt(phi) - half-step keeps it readable)
+       lead         1.456rem
+       group title  2.356rem  (lead x phi)
        h2           inherited above, clamp(1.6rem, 4.6vw, 2.9rem)
      Vertical rhythm and column gap step the same ladder: 1rem base ->
      1.618rem (item spacing / group-title margin) -> 2.618rem (column
@@ -733,8 +733,9 @@
     display: block;
     margin-top: 0.5rem;
     font-style: italic;
-    font-size: 0.9rem;
-    line-height: 1.6;
+    /* support = lead / sqrt(phi): 1.456 / 1.272 */
+    font-size: 1.145rem;
+    line-height: 1.618;
     color: var(--muted);
   }
 
