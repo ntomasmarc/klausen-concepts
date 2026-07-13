@@ -235,6 +235,7 @@
     /* golden ratio lockup: name = events size x phi^2 (2.618) */
     font-size: clamp(1.9rem, 4.5vw, 2.75rem);
     letter-spacing: 0.045em;
+    text-indent: 0.045em; /* balances trailing tracking - optical centering */
     line-height: 1;
     color: var(--logo-cream);
   }
@@ -643,7 +644,16 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
-    gap: 0.55em;
+    gap: 0.618em; /* phi-derived gap */
+  }
+  /* invisible mirror of "de ce" so the sigla itself sits dead-center on the page axis */
+  .why-head h2.why-sigla::after {
+    content: "de ce";
+    visibility: hidden;
+    font-size: 0.382em;
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: lowercase;
   }
   .why-sigla .dece {
     font-size: 0.382em; /* 1/phi^2 of the wordmark */
