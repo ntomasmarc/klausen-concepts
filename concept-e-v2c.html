@@ -638,6 +638,35 @@
     line-height: 1.28;
     margin: 1.1rem 0 1.3rem;
   }
+  /* Sigla-format title: small "de ce" + the exact brand lockup (client: logo format everywhere) */
+  .why-head h2.why-sigla {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 0.55em;
+  }
+  .why-sigla .dece {
+    font-size: 0.382em; /* 1/phi^2 of the wordmark */
+    font-weight: 400;
+    letter-spacing: 0.18em;
+    text-transform: lowercase;
+    color: var(--muted);
+  }
+  .why-sigla .sigla {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3em;
+  }
+  .why-sigla .sigla-name { line-height: 1.05; }
+  .why-sigla .sigla-events {
+    font-family: var(--font-label);
+    font-weight: 500;
+    font-size: 0.382em; /* logo ratio ~1/phi^2, like the header lockup */
+    letter-spacing: 0.56em;
+    text-indent: 0.56em;
+    color: var(--brand-red);
+  }
   .why-head p {
     font-style: italic;
     font-size: clamp(1.15rem, 2.2vw, 1.35rem);
@@ -881,7 +910,13 @@
   <div class="why-head reveal">
     <div class="fan" aria-hidden="true"></div>
     <p class="eyebrow">Concept complet de ospitalitate</p>
-    <h2 id="why-title">De ce Klausen Burger Events</h2>
+    <h2 id="why-title" class="why-sigla">
+      <span class="dece">de ce</span>
+      <span class="sigla">
+        <span class="sigla-name">Klausen Burger</span>
+        <span class="sigla-events">&middot; Events &middot;</span>
+      </span>
+    </h2>
   </div>
 
   <div class="registers">
@@ -890,11 +925,11 @@
       <ul class="register-items">
         <li>
           <span class="item-lead">Salon</span>
-          <span class="item-support">concept de grădină, cu elemente din natură, fântână cu apă și plante naturale</span>
+          <span class="item-support">cu un concept de grădină, cu elemente din natură, fântână arteziană și plante naturale</span>
         </li>
         <li>
           <span class="item-lead">Capacitate</span>
-          <span class="item-support">flexibilă, de 100-250 de locuri, cu posibilitate de extindere până la 400</span>
+          <span class="item-support">flexibilă, de la 100-250, cu posibilitate de extindere până la 400 de locuri</span>
         </li>
         <li>
           <span class="item-lead">Spațiu</span>
@@ -908,7 +943,7 @@
       <ul class="register-items">
         <li>
           <span class="item-lead">Laborator</span>
-          <span class="item-support">propriu de torturi personalizate, creații de cofetărie gourmet și mini deserturi pentru Candy-Bar</span>
+          <span class="item-support">propriu de prăjituri gourmet, torturi personalizate și mini deserturi pentru Candy-Bar</span>
         </li>
         <li>
           <span class="item-lead">Specialități</span>
